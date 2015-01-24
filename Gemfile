@@ -39,3 +39,7 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spree', '2.4.2'
 gem 'spree_gateway', github: 'spree/spree_gateway', branch: '2-4-stable'
 gem 'spree_auth_devise', github: 'spree/spree_auth_devise', branch: '2-4-stable'
+gem 'spree_i18n', github: 'spree-contrib/spree_i18n', branch: '2-4-stable'
+gem 'spree_wishlist', github: 'spree-contrib/spree_wishlist', branch: '2-4-stable'
+gem 'spree_email_to_friend', github: 'spree-contrib/spree_email_to_friend', branch: '2-4-stable'
+gem 'aws-sdk'

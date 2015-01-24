@@ -81,5 +81,7 @@ test:
 production:
   <<: *default
   database: BBXiaoWo_production
-  username: BBXiaoWo
-  password: <%= ENV['BBXIAOWO_DATABASE_PASSWORD'] %>
+  username: web
+  password: <%= ENV["DB_PASS"] %>
+  host: <%= ENV["DB_HOST"] %>
+  port: 5432
