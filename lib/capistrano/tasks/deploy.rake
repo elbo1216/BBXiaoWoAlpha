@@ -3,7 +3,7 @@ namespace :deploy do
   desc "Rake tasks"
   task :rake_task do
     on roles(:web) do
-      execute "cd /opt/BBXiaoWo && rake db:migrate"
+      execute "cd /opt/BBXiaoWo/current && rake db:migrate"
     end
   end
 
@@ -18,12 +18,12 @@ namespace :deploy do
 
   desc "After deploy tasks"
   task :post_deploy_tasks do
-    rake_task
-    restart
+    deploy:rake_task
+    deploy:restart
   end
 
   %w[start stop restart].each do |command|
-    desc "#{command} Unicorn server."
+    desc "#{command} Nginx/Passenger server."
     task command do
       on roles(:app) do
         execute "sudo service nginx #{command}"
