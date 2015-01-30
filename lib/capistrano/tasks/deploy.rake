@@ -18,8 +18,9 @@ namespace :deploy do
 
   desc "After deploy tasks"
   task :post_deploy_tasks do
-    deploy:rake_task
-    deploy:restart
+    invoke "deploy:rake_task"
+    invoke "deploy:restart"
+    invoke "deploy:cleanup"
   end
 
   %w[start stop restart].each do |command|
