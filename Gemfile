@@ -29,12 +29,10 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 # Use unicorn as the app server
 # gem 'unicorn'
 
-# Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
+gem 'capistrano-rails', group: :development
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
-
 
 gem 'spree', '2.4.2'
 gem 'spree_gateway', github: 'spree/spree_gateway', branch: '2-4-stable'
