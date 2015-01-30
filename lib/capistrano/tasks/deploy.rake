@@ -4,6 +4,7 @@ namespace :deploy do
   task :rake_task do
     on roles(:web) do
       execute "cd /opt/BBXiaoWo/current && rake db:migrate"
+      execute "cd /opt/BBXiaoWo/current && rake assets:precompile"
     end
   end
 
