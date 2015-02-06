@@ -40,4 +40,7 @@ gem 'spree_auth_devise', github: 'spree/spree_auth_devise', branch: '2-4-stable'
 gem 'spree_i18n', github: 'spree-contrib/spree_i18n', branch: '2-4-stable'
 gem 'spree_wishlist', github: 'spree-contrib/spree_wishlist', branch: '2-4-stable'
 gem 'spree_email_to_friend', github: 'spree-contrib/spree_email_to_friend', branch: '2-4-stable'
+gem 'spree_bootstrap_frontend', github: '200Creative/spree_bootstrap_frontend', branch: '2-4-stable'
+
 gem 'aws-sdk'
+
