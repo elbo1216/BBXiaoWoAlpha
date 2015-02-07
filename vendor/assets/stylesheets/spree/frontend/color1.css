@@ -445,7 +445,7 @@ a.prevcarousal { right: 30px; }
 /* mainslider10 Carousal */
 #pager.sliderindex10pager { margin-top: 5px; width: 100%; height: 10px }
 #pager.sliderindex10pager:after {
-content:'', clear:both; display: block }
+content:''; clear:both; display: block }
 #pager.sliderindex10pager a, #pager span { display: block; height: 10px; }
 #pager.sliderindex10pager a { border: 1px solid #ccc; width: 23%; margin: 5px 2px; display: inline-block; }
 #pager.sliderindex10pager a:hover { border-color: #999; }
