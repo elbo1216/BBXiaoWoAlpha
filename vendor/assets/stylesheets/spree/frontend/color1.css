@@ -180,8 +180,7 @@ select { padding: 6px 12px; border: 1px solid #E7E7E7; line-height: 26px }
 .headerdetails .navbar .nav li.topcart .dropdown-toggle .caret, .navbar .nav li.dropdown.open.topcart .caret { border-bottom-color: #999999; border-top-color: #999999 }
 .headerdetails ul.topcartopen { font-size: 12px; right: 0 }
 .headerdetails ul.topcartopen li > table { border-collapse: collapse; width: 100%; margin-bottom: 5px; padding: 10px }
-.headerdetails ul.topcartopen li > table td {
-color: #; vertical-align: top; padding: 5px 10px; border-bottom: 1px dashed #E7E7E7; }
+.headerdetails ul.topcartopen li > table td {vertical-align: top; padding: 5px 10px; border-bottom: 1px dashed #E7E7E7; }
 .headerdetails ul.topcartopen li > table .image { width: 1px; }
 .headerdetails ul.topcartopen li > table .image img { text-align: left; }
 .headerdetails ul.topcartopen li > table .name small { color: #999999; }

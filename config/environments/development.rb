@@ -28,6 +28,7 @@ Rails.application.configure do
   config.assets.debug = true
   config.assets.compress = false
   config.assets.compile = true
+  config.assets.paths << Rails.root.join('app', 'assets', 'fonts')
 
   # Adds additional error checking when serving assets at runtime.
   # Checks for improperly declared sprockets dependencies.
