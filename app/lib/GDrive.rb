@@ -3,7 +3,7 @@ class GDrive
   CLIENT_ID = ENV['GCLIENTID']
   CLIENT_SECRET = ENV['GSECRET']
   REDIRECT_URI = 'urn:ietf:wg:oauth:2.0:oob'
-  P12_PATH = '/Users/elbo1216/Downloads/BBXiaoWo-61cf96a56e73.p12'
+  P12_PATH = ENV['P12_PATH']
   WS_FILE_KEY='1w7mMfYDmJH2V8NJ_gyoqjoQ2iEryLL9YKTOa7iVI5ik'
 
   # HEADERS
