@@ -3,7 +3,7 @@
     <a href='#'>Log in</a> or <a href='#'>Register</a>
   </span>
   <span class='icons'>
-    <a id="link-to-cart" href="/cart"><img src='/assets/cart_icon.png'/></a>
-    <a href='/account'><img src='/assets/account_icon.png'/></a>
+    <%= link_to(image_tag('cart_icon.png'), '/cart', :id => "link-to-cart") %>
+    <%= link_to(image_tag('account_icon.png'), '/account', :id => "link-to-cart") %>
   </span>
 </nav>

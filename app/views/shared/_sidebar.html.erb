@@ -9,7 +9,7 @@
             <ul>
               <li id='taxonomy-root-<%= index %>' class='taxonomy-root'><%= Spree.t(taxonomy.name) %></li>
               <li class='hidden-container'>
-                <img id='img-pink-right-arrow-<%=index%>' class='pink-popup-arrow hidden' src='/assets/pink_right_arrow.png' >
+                <%= image_tag('pink_right_arrow.png', :id => "img-pink-right-arrow-#{index}", :class=> 'pink-popup-arrow hidden') %>
                 <div id='taxonomy-child-<%=index%>' class='taxonomy-children hidden'>
                   <%= taxons_tree(taxonomy.root, @taxon, max_level) %>
                 </div>
