@@ -1,0 +1,21 @@
+.pagination {
+  width: 100%;
+  text-align: center;
+}
+
+.pagination span {
+  padding: 5px;
+  text-align: center;
+  border-top: 1px solid #96979d;
+  border-bottom: 1px solid #96979d;
+  border-right: 1px solid #96979d;
+}
+
+.pagination .prev {
+  border-left: 1px solid #96979d;
+}
+
+.pagination .current {
+  background-color: red;
+  color: white;  
+}

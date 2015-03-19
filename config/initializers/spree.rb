@@ -10,7 +10,7 @@ Spree.config do |config|
   # Uncomment to stop tracking inventory levels in the application
   # config.track_inventory_levels = false
   config.allow_ssl_in_production = false
-  unless ENV['RAILS_ENV'] == 'development'
+#  unless ENV['RAILS_ENV'] == 'development'
     attachment_config = {
       s3_credentials: {
         access_key_id:     ENV['AWS_ACCESS_KEY_ID'],
@@ -36,7 +36,9 @@ Spree.config do |config|
     attachment_config.each do |key, value|
       Spree::Image.attachment_definitions[:attachment][key.to_sym] = value
     end
-  end
+#  end
+
+   config.products_per_page = 16
 end
 
 Spree.user_class = "Spree::User"

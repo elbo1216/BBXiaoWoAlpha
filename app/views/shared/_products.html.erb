@@ -1,0 +1,27 @@
+<%
+  paginated_products = @searcher.retrieve_products if params.key?(:keywords)
+  paginated_products ||= products
+%>
+
+<% if products.any? %>
+  <ul id="products" class="inline product-listing" data-hook>
+    <% products.each do |product| %>
+      <% url = product_path(product, :taxon_id => @taxon.try(:id)) %>
+     <li id="product_<%= product.id %>" class="" data-hook="products_list_item" itemscope itemtype="http://schema.org/Product">
+     <% cache(@taxon.present? ? [I18n.locale, current_currency, @taxon, product] : [I18n.locale, current_currency, product]) do %>
+       <div class="product-image">
+         <%= link_to small_image(product, :itemprop => "image"), url, :itemprop => 'url' %>
+       </div>
+       <div class='product-listing-name'>
+         <%= link_to truncate(product.name, :length => 40), url, :class => 'info', :itemprop => "name", :title => product.name %>
+       </div>
+       <div class='product-listing-price'>
+         <span class="selling" itemprop="price"><%= display_price(product) %></span>
+         <span class="msrp" itemprop="price"><%= display_price(product) %></span>
+       <div>
+      <% end %>
+    </li>
+    <% end -%>
+    <% reset_cycle("classes") %>
+  </ul>
+<% end %>

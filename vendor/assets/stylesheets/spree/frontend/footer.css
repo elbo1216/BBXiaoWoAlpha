@@ -1,0 +1,108 @@
+.footer {
+  width: 100%;
+  margin-top: 50px;
+  color: black;
+}
+
+.bg-container {
+  background: no-repeat url('/assets/footer_bg.jpg');
+  margin: auto;
+  width: 1215px;
+  height: 640px;
+  padding-top: 100px;
+}
+
+.footer-content {
+  background-color: white;
+  overflow:auto;
+  padding: 30px 10px;
+}
+
+.footer .footer-content h3 {
+  font: bold 22px arial, sans-serif;
+}
+
+.footer .footer-content .information-center li {
+  margin: 5px 0px;
+  font-size: 14px;
+}
+
+.footer .footer-content .information-center .help { 
+  background: url('/assets/sprites.png') 0 -170px no-repeat;
+  height: 25px;
+  padding: 2px 0px 0px 35px; 
+}
+
+.footer .footer-content .information-center .about { 
+  background: url('/assets/sprites.png') 0 -144px no-repeat;
+  height: 25px;
+  padding: 2px 0px 0px 35px; 
+}
+
+.footer .footer-content .information-center .faq { 
+  background: url('/assets/sprites.png') 0 -119px no-repeat;
+  height: 25px;
+  padding: 2px 0px 0px 35px; 
+}
+
+.footer .footer-content .information-center .contact { 
+  background: url('/assets/sprites.png') 0 -94px no-repeat;
+  height: 25px;
+  padding: 2px 0px 0px 35px; 
+}
+
+.footer .footer-content .information-center .account { 
+  background: url('/assets/sprites.png') 0 -70px no-repeat;
+  height: 25px;
+  padding: 2px 0px 0px 35px; 
+}
+
+.footer .footer-content .information-center .sitemap { 
+  background: url('/assets/sprites.png') 0 -46px no-repeat;
+  height: 25px;
+  padding: 2px 0px 0px 35px; 
+}
+
+.footer .footer-content .information-center .terms { 
+  background: url('/assets/sprites.png') 0 -21px no-repeat;
+  height: 25px;
+  padding: 2px 0px 0px 35px; 
+}
+
+.footer .footer-content .information-center .policy { 
+  background: url('/assets/sprites.png') 0 0 no-repeat;
+  height: 20px;
+  padding: 2px 0px 0px 35px; 
+
+}
+
+.footer .footer-content .newsletter {
+  background: none;
+  padding: 0px;
+  border: 0px;
+}
+
+.footer .footer-content .newsletter input {
+  width: 80%
+}
+
+.footer .footer-content .newsletter button {
+  margin-left: 10px;
+  background-color: red;
+  color: white;
+  font-size: 14px;
+}
+
+.footer .footer-content .newsletter span {
+  font-size: 14px;
+}
+
+.footer .copyright {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.footer .pull-left {
+  width: 33%;
+}
+

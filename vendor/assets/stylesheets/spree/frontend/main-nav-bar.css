@@ -1,0 +1,67 @@
+.main-nav-bar {
+ /* fallback */
+/*  background-color: #AE253B;
+  background: url(images/linear_bg_2.png);
+  background-repeat: repeat-x;
+*/
+  /* Safari 4-5, Chrome 1-9 */
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#AE253B), to(#ff899b));
+
+  /* Safari 5.1, Chrome 10+ */
+  background: -webkit-linear-gradient(top, #ff899b, #AE253B);
+
+  /* Firefox 3.6+ */
+  background: -moz-linear-gradient(top, #ff899b, #AE253B);
+
+  /* IE 10 */
+  background: -ms-linear-gradient(top, #ff899b, #AE253B);
+
+  /* Opera 11.10+ */
+  background: -o-linear-gradient(top, #ff899b, #AE253B);
+
+  height: 45px;
+}
+
+.main-nav-bar ul {
+  height: 100%;
+}
+
+.main-nav-bar ul li a {
+  color: white;
+  font-family: arial;
+  font-size: 16px;
+  margin: 0px 13px;
+}
+
+.main-left-nav {
+  float: left;
+}
+
+.main-left-nav li {
+  padding: 11px 0px;
+  float: left;
+  height: 100%;
+}
+
+.main-right-nav {
+  float: right;
+}
+
+.main-right-nav li {
+  float: right;
+  height: 100%;
+  margin-top:-2px;
+}
+
+.main-left-nav li:hover {
+  background-color: rgb(255, 166, 180);
+  -moz-transition: all .2s ease;
+  -webkit-transition: all .2s ease;
+  -o-transition: all .2s ease;
+}
+
+#keywords {
+  background:white url('/assets/magnifier.png') no-repeat scroll right center;
+  margin:0;
+  padding-right: 25px;
+}

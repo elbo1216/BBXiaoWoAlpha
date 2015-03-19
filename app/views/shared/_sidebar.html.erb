@@ -1,0 +1,23 @@
+<% max_level = Spree::Config[:max_level_in_taxons_menu] || 1 %>
+<div class='sidebar-content'>
+  <div class='sidebar-title'><%= Spree.t(:shop_all) %></div>
+  <nav id="taxonomies" class="sidebar-item" data-hook>
+    <ul>
+      <% @taxonomies.each_with_index do |taxonomy, index| %>
+        <% cache [I18n.locale, taxonomy, max_level] do %>
+          <li id='taxonomy-root-container-<%= index %>' class='taxonomy-root-container'>
+            <ul>
+              <li id='taxonomy-root-<%= index %>' class='taxonomy-root'><%= Spree.t(taxonomy.name) %></li>
+              <li class='hidden-container'>
+                <img id='img-pink-right-arrow-<%=index%>' class='pink-popup-arrow hidden' src='/assets/pink_right_arrow.png' >
+                <div id='taxonomy-child-<%=index%>' class='taxonomy-children hidden'>
+                  <%= taxons_tree(taxonomy.root, @taxon, max_level) %>
+                </div>
+              </li>
+            </ul>
+          </li>
+        <% end %>
+      <% end %>
+    </ul>
+  </nav>
+</div>

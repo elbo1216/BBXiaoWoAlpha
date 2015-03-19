@@ -20,4 +20,10 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  spree:
+    home: "HOME"
+    brands: "BRANDS"
+    new_products: "WHAT'S NEW"
+    on_sale: "ON SALE"
+    latest_news: "LATEST NEWS"
+    community: "COMMUNITY"

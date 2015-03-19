@@ -1,0 +1,33 @@
+<nav class="main-nav-bar">
+  <div class='container'>
+    <ul id="main-left-nav" class="main-left-nav inline" data-hook>
+      <li id="home-link" data-hook><%= link_to Spree.t(:home), spree.root_path %></li>
+      <li id="home-link" data-hook><%= link_to Spree.t(:brands), spree.root_path %></li>
+      <li id="home-link" data-hook><%= link_to Spree.t(:new_products), spree.root_path %></li>
+      <li id="home-link" data-hook><%= link_to Spree.t(:on_sale), spree.root_path %></li>
+      <li id="home-link" data-hook><%= link_to Spree.t(:latest_news), spree.root_path %></li>
+      <li id="home-link" data-hook><%= link_to Spree.t(:community), spree.root_path %></li>
+    </ul>
+    <ul class='main-right-nav'>
+      <% if SpreeI18n::Config.supported_locales.size > 1 %>
+        <li id="locale-select" data-hook>
+          <%= form_tag spree.set_locale_path, class: 'navbar-form' do %>
+            <div class="form-group">
+              <label for="locale" class="sr-only"><%= Spree.t(:'i18n.language') %></label>
+              <%= select_tag(:locale, options_for_select(supported_locales_options, I18n.locale), class: 'form-control', data: { href: spree.set_locale_path }) %>
+              <noscript><%= submit_tag %></noscript>
+            </div>
+          <% end %>
+        </li>
+      <% end %>
+      <li>
+        <form accept-charset="UTF-8" action="/products" class="navbar-form" method="get">
+          <div class="form-group">
+           <input class="form-control" id="keywords" name="keywords" placeholder="Search" type="search">
+          </div>
+        </form>
+      </li>
+    </ul>
+  </div>
+</nav>
+

@@ -1,0 +1,56 @@
+.sidebar-content {
+  float: left;
+}
+
+.sidebar-title {
+  padding: 10px 15px; 
+  margin-bottom: 10px;
+  background-color: rgb(249, 63, 92);
+  color: white;
+  text-align: center;
+  font-size: 16px;
+}
+
+.sidebar-content .taxonomy-root {
+  padding: 10px 15px;
+  background: white url('/assets/right_arrow.png') no-repeat scroll right center;
+  color: rgb(83, 83, 83);
+}
+
+.sidebar-content .taxonomy-root-on {
+  color: white;
+  background: #f4899a;
+}
+
+.sidebar-content .hover-state {
+  background: #f4899a;
+  cursor: pointer;
+  color: white;
+  -moz-transition: all .2s ease;
+  -webkit-transition: all .2s ease;
+  -o-transition: all .2s ease;
+}
+
+.sidebar-content .hidden-container {
+  float: right;
+  margin: -24px 0px;
+}
+
+.sidebar-content .pink-popup-arrow {
+  position: absolute;
+  margin: 0px 0px 0px 0px;
+}
+
+.sidebar-content .taxonomy-children {
+  position: absolute;
+  margin: -40px 0px 0px 11px;
+  z-index: 1000;
+}
+
+.sidebar-content .taxonomy-children .list-group-item {
+  border: 1px solid #ABABAB;
+}
+
+.sidebar-content .hidden {
+  display: none;
+}
