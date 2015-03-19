@@ -42,7 +42,7 @@ Spree.config do |config|
 end
 
 Spree.user_class = "Spree::User"
-SpreeI18n::Config.available_locales = [:en, :'zh-CN']
-SpreeI18n::Config.supported_locales = [:en, :'zh-CN']
+SpreeI18n::Config.available_locales = [:en, :'zh-CN', :'zh-TW']
+SpreeI18n::Config.supported_locales = [:en, :'zh-CN', :'zh-TW']
 
 Spree::Config.set(logo: "logo.png")
