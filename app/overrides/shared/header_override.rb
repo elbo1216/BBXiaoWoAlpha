@@ -25,3 +25,11 @@ Deface::Override.new(
   :replace => "#spree-header .container:nth-child(2)",
   :partial => 'shared/main_nav_bar'
 )
+
+Deface::Override.new(
+  :virtual_path => 'spree/shared/_header',
+  :name => "move_logo_left_override",
+  :set_attributes => "#logo",
+  :attributes => {:style => 'margin-left:-24px'}
+)
+

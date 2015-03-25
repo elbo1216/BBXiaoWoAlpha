@@ -1,0 +1,41 @@
+.sidebar-products {
+  float: left; 
+  width: 15%;
+}
+
+.product-container {
+  float: left;
+  width: 85%;
+}
+
+.product-container .product-images {
+  float: left;
+}
+
+.product-container .product-details {
+  float: left;
+  width: 70%;
+  margin: 0px 0px 0px 15px;
+}
+
+.product-container .product-details .product-title {
+  color: #f8405c;
+  font-size: 24px;
+  border-bottom: 2px solid #f8405c;
+  padding-bottom: 5px;
+}
+
+.product-container .product-meta-info {
+  margin: 40px 0px 0px 0px;
+}
+
+.product-container .thumbnails li {
+  float: left;
+  padding: 5px;
+  margin-right: 10px;
+  border: 0px;
+}
+
+.product-container .thumbnails .selected {
+  border: 1px solid gainsboro;
+}

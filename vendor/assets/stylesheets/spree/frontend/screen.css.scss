@@ -1,0 +1,16 @@
+#breadcrumbs {
+  ol {
+    border:0px;
+    li:before {
+      color: #f8405c;
+    }
+    li {
+      a {
+        color: #f8405c;
+      }
+      span {
+        text-transform: uppercase;
+      }
+    }
+  }
+}

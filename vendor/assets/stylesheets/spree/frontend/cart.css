@@ -1,0 +1,30 @@
+.cart-form .product-price  {
+  margin-top: 10px;
+}
+
+.cart-form .product-price .selling {
+  font-size: 26px;
+  color: #f8405c;
+}
+
+.cart-form .msrp {
+  color: gray;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 26px;
+  text-decoration: line-through;
+  margin-left: 10px;
+}
+
+.cart-form button {
+  background-color: #f93f5c;
+  color: white;
+}
+
+.cart-form .out-of-stock {
+  margin: 20px 10px;
+}
+
+.cart-form .add-to-cart {
+  margin: 25px 0px 0px 0px;
+}
