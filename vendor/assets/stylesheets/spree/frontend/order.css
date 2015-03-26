@@ -1,0 +1,30 @@
+#cart-container h1 {
+  color: #f93f5c;
+  border-bottom: solid 1px #f93f5c;
+  padding-bottom: 3px;
+  margin-bottom: 15px;
+}
+
+#cart-container .inside-cart-form .cart-items th {
+  color: white;
+  background-color: #f93f5c;
+}
+
+#cart-container .inside-cart-form .cart-items .cart-item-price {
+  color: #f93f5c;
+}
+
+#cart-container .inside-cart-form .cart-items .cart-item-total {
+  color: #f93f5c;
+}
+
+#cart-container button {
+  background-color: #f93f5c;
+  color: white;
+}
+
+
+#cart-container .inside-cart-form .cart-items .cart-total td {
+  background-color: pink;
+  color: black;
+}
