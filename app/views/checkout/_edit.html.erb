@@ -1,0 +1,59 @@
+<%= render :partial => 'spree/shared/error_messages', :locals => { :target => @order } %>
+  <div class="checkout-header" data-hook="checkout_header">
+    <h1 data-hook="checkout_title"><%= Spree.t(:checkout) %></h1>
+    <div class="columns thirteen omega" data-hook="checkout_progress"><%= checkout_progress %></div>
+  </div>
+
+<%= form_for @order, :url => update_checkout_path(@order.state), :html => { :id => "checkout_form_#{@order.state}" } do |form| %>
+  <div class="checkout-form pull-left" data-hook="checkout_content">
+    <div class="columns <%= if @order.state != 'confirm' then 'alpha twelve' else 'alpha omega sixteen' end %>" data-hook="checkout_form_wrapper">
+      <%= form.hidden_field :state_lock_version %>
+      <%= render @order.state, :form => form %>
+    </div>
+  </div>
+
+  <div class='cart pull-right'>
+    <h4 class='title'>Order Summary</h4>
+    <ul class="cart-detail">
+      <% @order.line_items.each do |line_item| -%>
+        <% variant = line_item.variant -%>
+        <li class="cart-item-image">
+          <% if variant.images.length == 0 %>
+            <%= link_to small_image(variant.product), variant.product %>
+          <% else %>
+            <%= link_to image_tag(variant.images.first.attachment.url(:mini)), variant.product %>
+          <% end %>
+        </li>
+        <li class="cart-item-description">
+          <%= link_to line_item.name, product_path(variant.product) %>
+          <%= variant.options_text %>
+          <% if line_item.insufficient_stock? %>
+            <span class="out-of-stock">
+              <%= Spree.t(:out_of_stock) %>&nbsp;&nbsp;<br />
+            </span>
+          <% end %>
+        </li>
+        <li class="cart-item-quantity">
+          <%= line_item.quantity || 0 %>
+        </li>
+        <li class="cart-item-total">
+          <%= line_item.display_amount.to_html unless line_item.quantity.nil? %>
+        </li>
+      <% end -%>
+    </ul>
+    <div class='clear'></div>
+    <h4 class="cart-total">
+      <span class='total'><%= @order.display_total %></span>
+      <span class='label'><%= Spree.t(:order_total) %></span>
+    </h4>
+    <div class="well text-right form-buttons">
+      <input class="btn btn-lg btn-success" name="commit" type="submit" value="Save and Continue">
+      <span data-hook="save_user_address">
+        &nbsp; &nbsp;
+        <input checked="checked" id="save_user_address" name="save_user_address" type="checkbox" value="1">
+        <label for="save_user_address">Save my address</label>
+      </span>
+    </div>
+  
+  </div>
+<% end %>
